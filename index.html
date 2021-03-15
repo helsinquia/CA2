@@ -8,11 +8,11 @@
 		<title>Order Form</title><!--Name on the browser tab-->
 
 		<link rel="stylesheet" href="style.css"><!--External style sheet CSS file link for styling-->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
         <script src="external.js"></script><!--pointing to the external javascript file-->
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>				
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 	</head>
 	<body onload="calculateTotal()"><!--https://www.w3schools.com/jsref/event_onload.asp-->
         <div class="header">
@@ -34,7 +34,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <input class="login" type="submit" value="Login" >
+                                <input class="login" type="button" value="Login" onclick="validateForm()">
                             </td>
                         </tr>
                     </form>
