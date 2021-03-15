@@ -1,0 +1,80 @@
+/*Main page CSS style Sheet*/
+body {
+    border: 0;/*it defines no border*/
+    padding: 0;/*it defines no padding*/
+    margin:0;/*it defines no margin*/
+    background-image: url(images/hamburger.jpg);/* Location of the background image source was pixabay.com*/
+    background-position: center center;/* Background image is centered vertically and horizontally at all times */
+    background-repeat:no-repeat ;/* Background image does not repeats */
+    background-size: cover;/* Allows the background image to rescale based on the container’s size */
+    background-color: #d10707;/* Good practice to set a background color that will be displayed while the background image is loading */
+    background-attachment: fixed;/*make sure that the background image stays fixed*/
+}
+
+.header img {
+    border-radius: 50%;/* creates a rounded image https://www.w3schools.com/howto/howto_css_rounded_images.asp*/
+    float:left;/*The image floats to the left of the page https://www.w3schools.com/css/css_float.asp*/
+}
+
+.tableLogin {
+    color: white; /* Defines the colour of the font inside the table*/
+    font-size: 2vw;/*To scale the font to any size screen and keep the format https://css-tricks.com/viewport-sized-typography/*/
+    font-weight: bold;/*adds bold to the font*/
+    padding: 5%; /*amount of space between the border of a the table and the rest of the page*/
+    border-collapse: separate;/*borders will collapse into a single border https://www.w3schools.com/cssref/pr_border-collapse.asp*/
+    border-spacing: 20px;/* Sets the distance between the borders of adjacent cells in the table https://www.w3schools.com/cssref/pr_border-spacing.asp*/
+    width:60%; /*Sets the width of the Table in the webpage*/
+}
+
+.tableOrder{
+    margin-top: 5%;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: bold;/*property sets how thick or thin characters in text should be displayed.*/
+    border-spacing: 30px; 
+    border-collapse: separate;
+}
+
+.tableOrder, th, td{
+    background-color: rgba(0, 0, 0, 0.0);/*transparency https://stackoverflow.com/questions/23583774/how-to-make-background-of-table-cell-transparent/28142391*/
+    color: #ffffff;
+    text-align: left;
+}
+
+.tableOrder img {
+    max-width:100%; 
+    border-radius: 10px;
+      
+}
+
+input[type=submit] {
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: sans-serif;
+    border: 1px solid rgb(214, 17, 17);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    
+}
+
+
+.input {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5%;
+    background-color: #ccc;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+

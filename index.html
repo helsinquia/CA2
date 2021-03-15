@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!-- HTML5 doctype -->
+
+<html lang="en"> <!-- HTML5 opening HTML tag with language.-->
+
+	<head>
+		<meta charset="UTF-8"> <!-- HTML5 charset -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">		
+		<title>Order Form</title><!--Name on the browser tab-->
+
+		<link rel="stylesheet" href="style.css"><!--External style sheet CSS file link for styling-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="external.js"></script><!--pointing to the external javascript file-->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>				
+	</head>
+	<body onload="calculateTotal()"><!--https://www.w3schools.com/jsref/event_onload.asp-->
+        <div class="header">
+            <img id="logo"src="images/logo.jpg" alt="Finnegan's">
+            <table class="tableLogin">
+                <tbody>
+                    <form id="loginForm" name="loginForm" method="POST">
+                        <tr>
+                            <td>Username</td>
+                            <td>
+                                <input class="input" type="text" name="username" id="username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                                <input class="input" type="password" name="password" id="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="login" type="submit" value="Login" >
+                            </td>
+                        </tr>
+                    </form>
+                </tbody>
+            </table>
+        </div>    
+        <div class="orderForm">
+            <table class="tableOrder">
+                <caption>Order and Type the code tacotopping for 10% discount!</caption>
+                <tbody>
+                    <form id="burgerForm" name="burgerForm" method="post" onsubmit="return validateNumber()">
+                        <tr><!--https://html.com/tables/rowspan-colspan/-->
+                            <th rowspan="3"><img id="burger" src="images/no_fuss_burger.jpg" alt="no_fuss_burger"></th>
+                                <td>
+                                <label>Select size:
+                                    <select id="size" name="size" type="text" onchange="calculateTotal()" class="input">
+                                        <option value="large">6oz Large</option>
+                                        <option value="extra_large">10oz Extra-Large</option>
+                                        <option value="supersize">16oz Supersize</option>
+                                    </select>   
+                                </label>  
+                                </td>
+                                <td>
+                                    <label>Quantity:</label>
+                                    <input value=1 id="quantity" type="text" name="quantity" class="input" onchange="calculateTotal()">
+                                </td>
+                        </tr>
+                        <tr class="pay">
+                            <td>
+                                <label>Discount Code</label>
+                                <input id="discount_code" type="text" name="discount_code" class="input" onchange="calculateTotal()">
+                            </td>
+                            <td>
+                                <label>Total</label>
+                                <input id="total" type="text" class="input" name="total"></td>
+                            <td> 
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Submit"></td></tr>
+                    </form>
+                </tbody>
+            </table> 
+        </div> 
+        <div id="supersized" title="Food Warning" class="hidden">
+            <p>You might get fatty</p>
+        </div> <!--  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>   https://jqueryui.com/dialog/  -->
+    </body>
+	
+</html>   
